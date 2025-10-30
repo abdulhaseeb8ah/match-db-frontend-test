@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npx vite build",
+  "outputDirectory": "dist/public",
+  "installCommand": "npm install --include=dev",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://matchdb-api.onrender.com/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
